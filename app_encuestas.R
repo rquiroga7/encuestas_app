@@ -250,9 +250,9 @@ server <- function(input, output, session) {
         geom_smooth(data=subset(filtered_data(), (fecha>as.Date("2023-08-13") & input$separate_trends==TRUE & encuestadora!="Elecciones legislativas" & encuestadora != "Elecciones generales" & encuestadora!= "Elecciones primarias")),method = "loess", se = input$showSE*nover25, aes(fill = party), show.legend = FALSE, span=input$slider2,family = "symmetric") +
 
         scale_color_manual(breaks = c("Juntos por el Cambio", "Frente de Todos", "La Libertad Avanza", "Frente de Izquierda", "Consenso Federal", "Otros - Blanco - Indecisos"),
-                           values = c("yellow3", "steelblue3", "black", "tomato3", "springgreen3", "gray66")) +
+                           values = c("yellow3", "steelblue3", "violet", "tomato3", "springgreen3", "gray66")) +
         scale_fill_manual(breaks = c("Juntos por el Cambio", "Frente de Todos", "La Libertad Avanza", "Frente de Izquierda", "Consenso Federal", "Otros - Blanco - Indecisos"),
-                          values = c("yellow3", "steelblue3", "black", "tomato3", "springgreen3", "gray66")) +
+                          values = c("yellow3", "steelblue3", "violet", "tomato3", "springgreen3", "gray66")) +
         theme_light() +
         scale_y_continuous(labels = scales::label_number(suffix = "%")) +
         scale_x_date(date_labels = "%b-%y") +
@@ -300,9 +300,9 @@ server <- function(input, output, session) {
         geom_smooth(data=subset(filtered_data(), (fecha<=as.Date("2023-08-13") & input$separate_trends==TRUE & encuestadora!="Elecciones legislativas" & encuestadora != "Elecciones generales" & encuestadora!= "Elecciones primarias")),method = "loess", se = input$showSE, aes(fill = party), show.legend = FALSE, span=input$slider) +
         geom_smooth(data=subset(filtered_data(), (fecha>as.Date("2023-08-13") & input$separate_trends==TRUE & encuestadora!="Elecciones legislativas" & encuestadora != "Elecciones generales" & encuestadora!= "Elecciones primarias")),method = "loess", se = input$showSE*nover25, aes(fill = party), show.legend = FALSE, span=input$slider2,family = "symmetric") +
         scale_color_manual(breaks = c("Juntos por el Cambio", "Frente de Todos", "La Libertad Avanza", "Frente de Izquierda", "Consenso Federal", "Otros - Blanco - Indecisos"),
-                           values = c("yellow3", "steelblue3", "black", "tomato3", "springgreen3", "gray66")) +
+                           values = c("yellow3", "steelblue3", "violet", "tomato3", "springgreen3", "gray66")) +
         scale_fill_manual(breaks = c("Juntos por el Cambio", "Frente de Todos", "La Libertad Avanza", "Frente de Izquierda", "Consenso Federal", "Otros - Blanco - Indecisos"),
-                          values = c("yellow3", "steelblue3", "black", "tomato3", "springgreen3", "gray66")) +
+                          values = c("yellow3", "steelblue3", "violet", "tomato3", "springgreen3", "gray66")) +
         theme_light() +
         scale_y_continuous(labels = scales::label_number(suffix = "%")) +
         scale_x_date(date_labels = "%b-%y") +
